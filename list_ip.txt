@@ -1,0 +1,31 @@
+12.20.10.205
+110.20.1.20
+101.20.10.149
+110.20.1.15
+110.20.10.159
+110.20.10.160
+110.28.10.157
+110.20.10.18
+110.20.10.23
+110.20.10.23
+110.20.109.14
+110.20.150.154
+101.20.10.155
+110.20.1.15
+110.20.11.93
+110.20.31.94
+110.20.11.73
+101.20.11.74
+110.20.10.17
+110.20.10.14
+110.20.10.21
+110.20.10.22
+101.28.10.21
+101.20.10.21
+101.20.10.145
+101.20.10.146
+101.20.10.200
+101.20.10.24
+
+Ejemplo listado de Ips, Esta linea sera registrada como un error por Getconf pero no causara el cierre de la aplicacion, 
+registrara tal evento en el log como un error de estructura en la direccion ip con fecha y hora.
