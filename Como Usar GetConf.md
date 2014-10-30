@@ -45,7 +45,7 @@ Con el listado sabemos que equipos han dado error y es posible volver a ejecutar
 Una vez se haya completado la tarea, copiaremos los nuevos archivos en
 S:\Servicios_TIC\CGR\carpeta Q\COPIA DE LINUX\Copias de respaldo - PLANTA\Respaldo_por_fechas”, dentro de una carpeta
 creada por nosotros con el siguiente formato “Respaldo_año-mes-dia”. Posteriormente enviar una notificación por 
-correo al CGR (cgr@salud.madrid.org), indicando que la copia de respaldo se ha realizado con éxito.
+correo al CGR (cgr@cualquiera.cualquiera.org), indicando que la copia de respaldo se ha realizado con éxito.
 
 Se pueden modificar algunos parámetros de Getconf para optimizar su funcionamiento, los cambios se pueden realizar 
 directamente en el código del programa.
