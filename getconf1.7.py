@@ -30,8 +30,8 @@ try:
     username = ''
     password = ''
     teldat_user = 'root'
-    teldat_pass = 's0!0c0re'
-    enable_pass = 's0!0c0re\n'
+    teldat_pass = 'p455w0rd1'
+    enable_pass = 'p455w0rd2\n'
     list_ip = []
     ip_error_list = []
     error_num = 0
@@ -133,13 +133,13 @@ class Save_Conf(threading.Thread):
         object_var2.model_type = ''
         date0 = getdatetime()
         if 0 != 0: 
-            print 'El mundo se ha sumido en el kaos.'
+            pass # Para una posible expansion...
         else:
             if ipFormatChk(self.num) == True:
                 semaphore.acquire()
                 try:
-                    router = telnetlib.Telnet(self.num,23,5) ###WORK###        
-                    #router = telnetlib.Telnet(host=self.num)###HOUSE### 
+                    router = telnetlib.Telnet(self.num,23,5) ###Trabajo###        
+                    #router = telnetlib.Telnet(host=self.num)###Casa### 
                 except:
                     if sound:
                         print ('\a')
@@ -185,7 +185,7 @@ class Save_Conf(threading.Thread):
                         router.write(username + '\n')  
                         router.read_until(u'Password: ')
                         router.write(password + '\n')
-                        router.write('K!llers\n')           
+                        router.write('p455w0rd333\n')           
                         router.write('en\n')
                         router.read_until('Password: ',1) #>>>>> TIME 3
                         router.write(enable_pass)
