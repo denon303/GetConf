@@ -6,7 +6,7 @@ routers (Cisco y Teldat) gestionados por el CGP en remoto de una forma rápida y
 Este documento describe el procedimiento para realizar una copia de seguridad de todos los routers (Cisco y Teldat)
 gestionados por el CGP de una forma rápida y sencilla.
 Getconf 1.7 realiza las siguientes acciones de forma automática:
--    Accede a los equipos (Cisco y Teldat).
+- Accede a los equipos (Cisco y Teldat).
 -	Ejecuta la orden “show running-config”.
 -	Captura la salida del terminal.
 -	Guarda el resultado en archivos de texto.
@@ -49,14 +49,18 @@ correo al CGR (cgr@cualquiera.cualquiera.org), indicando que la copia de respald
 
 Se pueden modificar algunos parámetros de Getconf para optimizar su funcionamiento, los cambios se pueden realizar 
 directamente en el código del programa.
--	thread_multi = 50
--	Getconf tiene soporte multithreading (multihilo), es el numero de hilos simultáneos permitidos. Por defecto 50. 
+
+-	thread_multi = 50 
+Getconf tiene soporte multithreading (multihilo), es el numero de hilos simultáneos permitidos. Por defecto 50. 
 (Esto afecta a la cantidad de conexiones simultaneas). 
+
 -	thread_time_out = 0.25 
 Es el tiempo de espera en mili-segundos entre hilos. (Para no saturar con el disparo de hilos).
--	enable_pass = 's0!0c0re\n' 
-Es la clave de acceso en modo privilegiado de CISCO. (En este caso es s0!0c0re, la “\n” sirve para enviar un retorno
+
+-	enable_pass = '**********' 
+Es la clave de acceso en modo privilegiado de CISCO. (En este caso es *********, la “\n” sirve para enviar un retorno
 de carro (Entrar) al terminal.
+
 -	Todos los métodos “time.sleep()” dentro de la función Save_cisco() son tiempos de  espera para capturar los datos
 que recibimos desde los equipos remotos, cada LOTE tiene un retardo distinto. (Por ejemplo un acceso ADSL es mas 
 lento que acceso MACROLAN de FIBRA) Con esto conseguimos mayor velocidad en el procedimiento y garantiza que 
